@@ -1,0 +1,8 @@
+Changes
+LICENSE
+MANIFEST
+Makefile.PL
+README.pod
+lib/Text/Control.pm
+t/001_load.t
+t/002_functions.t
