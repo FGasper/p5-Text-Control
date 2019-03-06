@@ -1,10 +1,8 @@
-=encoding utf-8
-
-=head1 NAME
+# NAME
 
 Text::Control - Transforms of control characters
 
-=head1 SYNOPSIS
+# SYNOPSIS
 
     use Text::Control;
 
@@ -13,50 +11,49 @@ Text::Control - Transforms of control characters
     Text::Control::to_hex("\x00\\Hi\x7fthere.\x80\xff");
     # \x00\\Hi\x7fthere.\x80\xff -- note the escaped backslash
 
-=head1 DESCRIPTION
+# DESCRIPTION
 
 These are transforms that I find useful for debugging. Maybe you will, too?
 
-=head1 NONPRINTABLE BYTES
+# NONPRINTABLE BYTES
 
 This module considers byte numbers 32 - 126 to be “printable”; i.e., they
 represent actual ASCII characters. Anything outside this range is thus
 “nonprintable”.
 
-=head1 FUNCTIONS
+# FUNCTIONS
 
-=head2 to_dot( OCTET_STRING )
+## to\_dot( OCTET\_STRING )
 
-Transforms each nonprintable byte into a dot (C<.>, ASCII 46) and returns
+Transforms each nonprintable byte into a dot (`.`, ASCII 46) and returns
 the result.
 
-=head2 to_hex( OCTET_STRING )
+## to\_hex( OCTET\_STRING )
 
-Transforms each nonprintable byte into the corresponding \x.. sequence,
+Transforms each nonprintable byte into the corresponding \\x.. sequence,
 appropriate for feeding into
-C<eval()>. For example, a NUL byte comes out as C<\x00>.
+`eval()`. For example, a NUL byte comes out as `\x00`.
 
-In order to make this encoding reversible, backslash characters (C<\>) are
-double-escaped (i.e., C<\> becomes C<\\>).
+In order to make this encoding reversible, backslash characters (`\`) are
+double-escaped (i.e., `\` becomes `\\`).
 
-=head2 from_hex( FROM_TO_HEX )
+## from\_hex( FROM\_TO\_HEX )
 
-This transforms the result of C<to_hex()> back into its original form.
+This transforms the result of `to_hex()` back into its original form.
 I’m not sure this is actually useful :), but hey.
 
-=head1 AUTHOR
+# AUTHOR
 
 Felipe Gasper (FELIPE)
 
-=head1 REPOSITORY
+# REPOSITORY
 
 https://github.com/FGasper/p5-Text-Control
 
-=head1 COPYRIGHT
+# COPYRIGHT
 
 This program is free software; you can redistribute
 it and/or modify it under the same terms as Perl itself.
 
 The full text of the license can be found in the
 LICENSE file included with this module.
-
