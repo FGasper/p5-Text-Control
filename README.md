@@ -48,7 +48,7 @@ Felipe Gasper (FELIPE)
 
 # REPOSITORY
 
-https://github.com/FGasper/p5-Text-Control
+[https://github.com/FGasper/p5-Text-Control](https://github.com/FGasper/p5-Text-Control)
 
 # COPYRIGHT
 
